@@ -6,7 +6,7 @@ This is the first time I've had the chance of participating in GSoC and I hope y
 This project aims to bring the functionality [this](https://velocityra.github.io/gsoc-2017) GSoC 2017 project introduced to RetroPlayer to every platform Kodi supports, through OpenGL and OpenGL-ES back-ends.
 
 You can see it in action in this video.
-[![YouTube Demo](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/edits/resources/preview.png?raw=true)](https://www.youtube.com/watch?v=2Y_Eo7ZL0Ks&feature=youtu.be)
+[![YouTube Demo](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/preview.png?raw=true)](https://www.youtube.com/watch?v=2Y_Eo7ZL0Ks&feature=youtu.be)
 
 ## Challenges
 To give you a bit of context, this is the first time I'm working with OpenGL and also the first time I'm working on such a significant project with such a huge codebase.
@@ -39,11 +39,11 @@ The last commit that should be considered inside the GSoC 2019 period is [this](
 - The cursor tends to cause flickering in some cases, however, it appears randomly and therefore it's not easily reproducible.
 ### Major
 - Under the menu `Settings->Video Filter`, there is a list with the available shader presets. Normally, this list would display real-time previews of each preset on the thumbnails and when selected, on the screen. As of right now, none of these work. Here's an image to illustrate the issue.
-![Black previews bug](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/edits/resources/black_previews_bug.png?raw=true)
+![Black previews bug](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/black_previews_bug.png?raw=true)
 - Lookup textures (LUTs) aren't supported yet, even though I already implemented almost all the logic, I couldn't get them to work.
 - Following the previous issue, any presets that heavily rely on LUTs, do not display what they're supposed to or, most of the time, anything at all. I used 2048 with the preset `reshade/halftone-print.glslp` as it is a core game on both Kodi and RetroArch and, therefore, ideal for a side-to-side comparison, to better illustrate the issue. The second one is correct, the first one isn't.
-![Buggy halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/edits/resources/halftone-print-buggy.png?raw=true)
-![Correct halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/edits/resources/halftone-print-working.png?raw=true)
+![Buggy halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-buggy.png?raw=true)
+![Correct halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-working.png?raw=true)
 - Custom borders don't work as they're loaded through LUTs.
 - The majority of multi-pass presets (3+ passes) don't work but I suspect that many of those will, after I successfully implement the LUT support. Some do work perfectly fine, so this is probably a good indicator that the rendering chain logic is solid.
 
