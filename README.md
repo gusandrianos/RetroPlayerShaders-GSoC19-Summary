@@ -31,7 +31,7 @@ On the second month, I started implementing major parts of the project but I was
 
 On the last month, I finally connected my code to RetroPlayer and started debugging. This month has been the most productive part of GSoC for me, as the pressure of the deadline gave me extra motivation to work hard and reach the project goal. I started working towards getting my code to display something. After that happened, I got most single-pass presets to work and gradually moved to dual-pass and multi-pass presets, however, most of those do not currently work.
 
-You can find all the changes in this [work-in-progress pull request](https://github.com/garbear/xbmc/pull/114).
+You can find all the changes and instuctions to use my code in this [work-in-progress pull request](https://github.com/garbear/xbmc/pull/114).
 The last commit that should be considered inside the GSoC 2019 period is [this](https://github.com/KostasAndrianos/xbmc/commit/e6e3dab0342f4f9e0cd567e3ff03e6d9e74d2266) one. As of right now, my code isn't merged.
 
 ## Bugs
