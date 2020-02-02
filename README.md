@@ -6,7 +6,7 @@ This is the first time I've had the chance of participating in GSoC and I hope y
 This project aims to bring the functionality [this](https://velocityra.github.io/gsoc-2017) GSoC 2017 project introduced to RetroPlayer to every platform Kodi supports, through OpenGL and OpenGL-ES back-ends.
 
 You can see it in action in this video.
-[![YouTube Demo](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/preview.png?raw=true)](https://www.youtube.com/watch?v=2Y_Eo7ZL0Ks&feature=youtu.be)
+[![YouTube Demo](https://github.com/gusandrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/preview.png?raw=true)](https://www.youtube.com/watch?v=2Y_Eo7ZL0Ks&feature=youtu.be)
 
 ## Challenges
 To give you a bit of context, this is the first time I'm working with OpenGL and also the first time I'm working on such a significant project with such a huge codebase.
@@ -32,18 +32,18 @@ On the second month, I started implementing major parts of the project but I was
 On the last month, I finally connected my code to RetroPlayer and started debugging. This month has been the most productive part of GSoC for me, as the pressure of the deadline gave me extra motivation to work hard and reach the project goal. I started working towards getting my code to display something. After that happened, I got most single-pass presets to work and gradually moved to dual-pass and multi-pass presets, however, most of those do not currently work.
 
 You can find all the changes and instructions to use my code in this [work-in-progress pull request](https://github.com/garbear/xbmc/pull/114).
-The last commit that should be considered inside the GSoC 2019 period is [this](https://github.com/KostasAndrianos/xbmc/commit/e6e3dab0342f4f9e0cd567e3ff03e6d9e74d2266) one. As of right now, my code isn't merged.
+The last commit that should be considered inside the GSoC 2019 period is [this](https://github.com/gusandrianos/xbmc/commit/e6e3dab0342f4f9e0cd567e3ff03e6d9e74d2266) one. As of right now, my code isn't merged.
 
 ## Bugs
 ### Minor
 - The cursor tends to cause flickering in some cases, however, it appears randomly and therefore it's not easily reproducible.
 ### Major
 - Under the menu `Settings->Video Filter`, there is a list with the available shader presets. Normally, this list would display real-time previews of each preset on the thumbnails and when selected, on the screen. As of right now, none of these work. Here's an image to illustrate the issue.
-![Black previews bug](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/black_previews_bug.png?raw=true)
+![Black previews bug](https://github.com/gusandrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/black_previews_bug.png?raw=true)
 - Lookup textures (LUTs) aren't supported yet, even though I already implemented almost all the logic, I couldn't get them to work.
 - Following the previous issue, any presets that heavily rely on LUTs, do not display what they're supposed to or, most of the time, anything at all. I used 2048 with the preset `reshade/halftone-print.glslp` as it is a core game on both Kodi and RetroArch and, therefore, ideal for a side-to-side comparison, to better illustrate the issue. The second one is correct, the first one isn't.
-![Buggy halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-buggy.png?raw=true)
-![Correct halftone](https://github.com/KostasAndrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-working.png?raw=true)
+![Buggy halftone](https://github.com/gusandrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-buggy.png?raw=true)
+![Correct halftone](https://github.com/gusandrianos/RetroPlayerShaders-GSoC19-Summary/blob/master/resources/halftone-print-working.png?raw=true)
 - Custom borders don't work as they're loaded through LUTs.
 - The majority of multi-pass presets (3+ passes) don't work but I suspect that many of those will, after I successfully implement the LUT support. Some do work perfectly fine, so this is probably a good indicator that the rendering chain logic is solid.
 
